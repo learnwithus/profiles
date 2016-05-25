@@ -55,6 +55,7 @@ body {
     }
 }
 
+
 .loader {
 	position: fixed;
 	left: 0px;
@@ -62,7 +63,7 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url('https://webedpm.com/~nomonke1/park/profiles/img/preloader_tetris.gif') 50% 50% no-repeat #141414;	
+	background: #1B1C1C;	
 }
 
 #tiles .tile {
@@ -119,12 +120,13 @@ body {
     font-size: 4.5em;
 }
 #detail #header {
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 700px;
-		background-size: cover;
-	   background-position: right;		
-	   background-color:#1B1C1C;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 700px;
+	background-size: cover;
+	background-position: right;		
+	background-color: #1B1C1C;
+	background-attachment: fixed;
 }
 
 #detail #header #title-user {
@@ -144,11 +146,9 @@ body {
         margin-right: 30px;
     }
 	#detail #header {
-		background-repeat: no-repeat;
 		width: 100%;
 		height: 280px;
-		background-size: cover;
-	    background-position: right;		
+		background-attachment: scroll;
 	}
 }
 
@@ -258,3 +258,11 @@ body {
 .modal-body {
     padding: 0px;
 }
+
+#loader_title {
+    color: #fff;
+    font-size: 6em;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 15%;}

@@ -21,7 +21,7 @@
         
         <div id="detail">
             <div class="modal-body">
-                <div id="header" class="parallax" style="background-image: url(https://webedpm.com/~nomonke1/park/profiles/img/header_'; 
+                <div id="header" style="background-image: url(https://webedpm.com/~nomonke1/park/profiles/img/header_'; 
                     echo $user['org']; echo '_';
                     echo str_replace(' ', '_', $user['title']); echo '_';
                     echo str_replace(' ', '_', strtolower($user['first'])); echo '_';
