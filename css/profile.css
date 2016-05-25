@@ -1,0 +1,260 @@
+body {
+    font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 100%;
+    background: #1B1C1C;
+}
+
+/* Tile page styles */
+
+
+/*
+    Bootstrap-like columns with 5 columns: 
+    Retrieved from http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/
+*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding: 0px;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    #tiles .col-xs-15 {
+        width: 100%;
+    }
+    #detail .col-xs-15 {
+        width: 100%;
+    }	
+}
+
+@media (min-width: 768px) {
+    #tiles .col-sm-15 {
+        width: 50%;
+    }
+    #detail .col-sm-15 {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    #tiles .col-md-15 {
+        width: 25%;
+    }
+    #detail .col-md-15 {
+        width: 20%;
+    }
+}
+@media (min-width: 1200px) {
+    #tiles .col-lg-15 {
+        width: 20%;
+    }
+    #detail .col-lg-15 {
+        width: 20%;
+    }
+}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('https://webedpm.com/~nomonke1/park/profiles/img/preloader_tetris.gif') 50% 50% no-repeat #141414;	
+}
+
+#tiles .tile {
+    cursor: pointer;
+}
+
+#tiles .image-tile-user {
+    position: relative;
+    width: 100%;
+    z-index:-2;
+}
+
+#tiles .image-tile-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#tiles .hidden {
+    display: none;
+    visibility: hidden;
+}
+
+#tiles .heading-tile-name {
+    color: #FFFFFF;
+    margin-top: -50px;
+    margin-right: 10px;  
+    float: right;
+    font-size: 1.9em;
+}
+
+#tiles .heading-tile-title {
+    color: #BDBDBD;
+    margin-top: -25px;
+    margin-right: 10px;
+    float: right;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+/* Detail page styles */
+#detail{
+	background:#F0F5F9;
+}
+#detail #header #name-user {
+    position: relative;
+    color: #FFFFFF;
+    margin-top: -120px;
+    margin-right: 50px;
+    float: right;
+    font-size: 4.5em;
+}
+#detail #header {
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 700px;
+		background-size: cover;
+	   background-position: right;		
+	   background-color:#1B1C1C;
+}
+
+#detail #header #title-user {
+    position: relative;
+    color: #BDBDBD;
+    margin-top: -70px;
+    margin-right: 50px;
+    float: right;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    #detail #header #name-user {
+        font-size: 3em;
+        margin-top: -70px;
+        margin-right: 30px;
+    }
+	#detail #header {
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 280px;
+		background-size: cover;
+	    background-position: right;		
+	}
+}
+
+#detail #back {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+#detail .bar {
+    background-color: #ccc;
+    text-align: center;
+	box-shadow:	2px 2px 22px 2px #888888;
+    z-index: 2;
+    position: relative;
+}
+
+#detail .heading-info-user {
+    color: #904799; 
+}
+
+#detail .info-user {
+    color: #F15D3F; 
+    font-size: 1.75em;
+}
+
+#detail .content {
+    background-color: #FFFFFF;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 900px;
+    margin: auto;
+}
+
+#detail #org {
+    font-size: 2em; 
+    text-transform: uppercase;
+}
+
+#detail .heading-description {
+    color: #0078AE; 
+}
+
+#detail .description {
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* Modal styles */
+.modal .modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+}
+
+.modal .close-modal {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    float: right;
+    top: 25px;
+    right: 50px;
+    z-index: 1;
+}
+
+.modal .close-modal:hover {
+    opacity: 0.5;
+}
+
+.modal .close-modal .lr {
+    height: 75px;
+    width: 1px;
+    margin-left: 35px;
+    background-color: #9E9E9E;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    z-index: 2;
+}
+
+.modal .close-modal .lr .rl {
+    height: 75px;
+    width: 1px;
+    background-color: #9E9E9E;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .modal .close-modal {
+        top: 15px;
+        right: 15px;
+    }
+
+    .modal .close-modal .lr,
+    .modal .close-modal .lr .rl {
+        height: 45px;
+    }
+}
+
+.modal-body {
+    padding: 0px;
+}
