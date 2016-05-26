@@ -6,7 +6,7 @@ $(function() {
 			var user = data_parsed[i];
 			
 			$("#tiles").append(
-				"<div id='" + user['id'] + "' class='tile col-xs-12 col-sm-6 col-md-3 col-lg-15'>" + 
+				"<div id='" + user['id'] + "' class='tile col-xs-6 col-sm-6 col-md-3 col-lg-15'>" + 
 					"<div>" +
 						"<img src='img/tile_" + user['org'] + "_" + user['title'].replace(/ /g, "_") 
 						+ "_" + user['first'].toLowerCase().replace(/ /g, "_") 
@@ -37,10 +37,13 @@ $(function() {
 		    $(".modal").scroll(function(e){
 			e.preventDefault(); 
 			var pos = ($('.modal').scrollTop() * 0.5) + "px";
-			$('.parallax').animate({'background-position-y': pos}, .1);
-			//$('.parallax').css('background-position', '0px ' + pos);
+			//$('.parallax').animate({'background-position-y': pos}, .1);
+			$('.parallax').css('background-position', '0px ' + pos);
 			return false;
 		    });
+		$(".modal").on('scroll', function() {
+		   $(".modal").requestAnimationFrame(scrollHandler);
+		});
 			$(document).keydown(function(key) {
 				if (key.keyCode == 27) {
 					$('#user-modal').modal('hide');
