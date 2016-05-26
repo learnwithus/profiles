@@ -1,8 +1,9 @@
 <?php
-    $conn = mysql_connect("localhost", "nomonke1_park", "123...Park")
+    require "config.php";
+    $conn = mysql_connect($host, $username, $password)
         or die("Unable to connect to MySQL");
     
-    $selected = mysql_select_db("nomonke1_display_profile", $conn) 
+    $selected = mysql_select_db($db_name, $conn) 
         or die("Could not select display_profiles"); 
     if (isset($_GET["pk"])) {
         $row = mysql_query("SELECT * FROM users WHERE id = " . $_GET["pk"]);
@@ -10,7 +11,7 @@
 
 
         echo '
-<div class="modal fade" role="dialog" id="user-modal">
+<div class="modal fade" role="dialog" id="user-modal" onscroll="return false;">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
             <div class="lr">
@@ -21,13 +22,14 @@
         
         <div id="detail">
             <div class="modal-body">
-                <div id="header" style="background-image: url(https://webedpm.com/~nomonke1/park/profiles/img/header_'; 
+                <div id="header" class="parallax" style="background-image: url(img/header_'; 
                     echo $user['org']; echo '_';
                     echo str_replace(' ', '_', $user['title']); echo '_';
                     echo str_replace(' ', '_', strtolower($user['first'])); echo '_';
                     echo str_replace(' ', '_', strtolower($user['last'])); echo '_';
                	    echo $user['id']; echo '.jpg'; 
 		    echo ');">
+		    <img src="img/overlay_header.png" class="image-detail-overlay"/>	
                     <h1 id="name-user">'; echo $user['first']; echo ' '; echo $user['last']; echo '</h1>
                     <h1 id="title-user">'; echo $user['title']; echo '</h1>
                 </div>

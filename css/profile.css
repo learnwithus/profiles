@@ -2,8 +2,12 @@ body {
     font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
     font-size: 100%;
     background: #1B1C1C;
+
 }
 
+::-webkit-scrollbar              { background-color: #1b1c1c; }
+::-webkit-scrollbar-track        { background-color: #1b1c1c; }
+::-webkit-scrollbar-thumb        { background-color: #646464; }
 /* Tile page styles */
 
 
@@ -96,6 +100,7 @@ body {
     margin-right: 10px;  
     float: right;
     font-size: 1.9em;
+    text-transform: uppercase;
 }
 
 #tiles .heading-tile-title {
@@ -111,44 +116,85 @@ body {
 #detail{
 	background:#F0F5F9;
 }
-#detail #header #name-user {
-    position: relative;
-    color: #FFFFFF;
-    margin-top: -120px;
-    margin-right: 50px;
-    float: right;
-    font-size: 4.5em;
-}
 #detail #header {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 700px;
 	background-size: cover;
-	background-position: right;		
+/*	background-position: right;	*/
 	background-color: #1B1C1C;
-	background-attachment: fixed;
+}
+/*
+#tiles .image-tile-user {
+    position: relative;
+    width: 100%;
+    z-index:-2;
+}
+*/
+#detail .image-detail-overlay {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+#detail #header #name-user {
+    position: absolute;
+    color: #FFFFFF;
+    top: 575px;
+    right: 30px; 
+    font-size: 4.5em;
+    text-transform: uppercase;
+    z-index: 3;
 }
 
 #detail #header #title-user {
-    position: relative;
+    position: absolute;
     color: #BDBDBD;
-    margin-top: -70px;
-    margin-right: 50px;
-    float: right;
+    top: 625px;
+    right: 30px;
     font-size: 4em;
     text-transform: uppercase;
+    z-index: 4;
+}
+
+@media (min-width: 768px) and (max-width: 1150px){
+	#detail #header {
+		width: 100%;
+		height: 490px;
+	}
+
+    #detail #header #name-user {
+        font-size: 3em;
+        top: 380px;
+        right: 30px;
+    }
+	#detail #header #title-user {
+		font-size: 3em;
+		top: 420px;
+		right: 30px;
+	}
+
 }
 
 @media (max-width: 768px) {
+
     #detail #header #name-user {
         font-size: 3em;
-        margin-top: -70px;
-        margin-right: 30px;
+        top: 180px;
+        right: 30px;
     }
+	#detail #header #title-user {
+		font-size: 3em;
+		top: 220px;
+		right: 30px;
+	}
 	#detail #header {
 		width: 100%;
 		height: 280px;
-		background-attachment: scroll;
+	/*	background-attachment: scroll;*/
 	}
 }
 
@@ -215,7 +261,7 @@ body {
     float: right;
     top: 25px;
     right: 50px;
-    z-index: 1;
+    z-index: 5;
 }
 
 .modal .close-modal:hover {
@@ -230,7 +276,7 @@ body {
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    z-index: 2;
+    z-index: 6;
 }
 
 .modal .close-modal .lr .rl {
@@ -240,7 +286,7 @@ body {
     transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
-    z-index: 3;
+    z-index: 7;
 }
 
 @media (max-width: 768px) {
