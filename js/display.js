@@ -63,7 +63,6 @@ $(function() {
 			window.names[user['id']] = user['first'].toUpperCase() + ' ' + user['last'].toUpperCase();
 			window.titles[user['id']] = user['title'].toUpperCase();
 		}
-	});
 
 		$(".tile").off().on("click",function() {
 			$(".loader").fadeIn("fast");
@@ -93,7 +92,7 @@ $(function() {
 	});
 
 	$(window).load(function() {
-		$(".loader").delay(10).fadeOut("slow");
+		$(".loader").delay(3000).fadeOut("slow");
 	});
 
 	$("#search").on('input', function() {
