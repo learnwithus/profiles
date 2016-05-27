@@ -388,7 +388,7 @@ div#loader_overlay {
 	padding-bottom:100%;
 }
 div#loader_overlay img {
-    width: 24%;
+   /* width: 24%;*/
 }
 
 #loader_img {
