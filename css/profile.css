@@ -59,6 +59,25 @@ body {
     }
 }
 
+.navbar-fixed-top {
+    background-color: #424242;
+    border: 0;
+}
+
+.dropdown-toggle {
+    width: 100%;
+}
+
+.dropdown-menu {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.menu-item {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+}
 
 .loader {
 	position: fixed;
@@ -72,7 +91,7 @@ body {
 
 #loader_title {
 	text-transform: uppercase;
-	font-size: 2.5em;
+	font-size: 4em;
 }
 
 #tiles .tile {
@@ -328,3 +347,9 @@ body {
     width: 100%;
     text-align: center;
     padding-top: 15%;}
+
+#loader_image {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 0%;}
