@@ -28,18 +28,19 @@
           </button>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-		    <form class="navbar-form navbar-right">
+		    <form id="search-form" class="navbar-form navbar-right">
 		        <input id="search" type="text" class="form-control" placeholder="Search">
 		    </form>
 		    <form class="navbar-form navbar-right">
 	            <div class="dropdown">
-				    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Occupation
+				    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Profession
 				    <span class="caret"></span></button>
 				    <ul class="dropdown-menu text-center">
-					    <li class="menu-item">PHYSICIAN</li>
-					    <li class="menu-item">NURSE</li>
-					    <li class="menu-item">UNIT CLERK</li>
-					    <li class="menu-item">STUDENT</li>
+					    <li class="menu-item">Physician</li>
+					    <li class="menu-item">Nurse</li>
+					    <li class="menu-item">Unit Clerk</li>
+					    <li class="menu-item">Student</li>
+					    <li class="menu-item">All</li>
 				    </ul>
 				</div>
 			</form>
@@ -54,6 +55,7 @@
 	</div>
 	<div id="tiles"></div>
 	<div id="result"></div>
+	<button id="back" class="btn btn-default pull-right">Back to main</button>
 
 	<script src="js/jquery.js"></script> 
 	<script src="js/bootstrap.min.js"></script> 

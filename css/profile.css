@@ -147,8 +147,13 @@ body {
     }	
 }
 
+#back {
+    position: relative;
+    margin: 16px 16px 16px 0px;
+}
+
 /* Detail page styles */
-#detail{
+#detail {
 	background:#F0F5F9;
 }
 #detail #header {
