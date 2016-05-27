@@ -50,18 +50,20 @@ $(function() {
 					"</div>" +
 				"</div>"
 			);
-			
+
 			if (i == half) {
 				$("#loader_title").html("<h1>" + "Physician Display" + "</h1>");
-				$("#loader_img").fadeOut("fast");	
-				$("#loader_title").fadeIn("slow");
-				$("#loader_img").attr("src", "img/preloader_tetris.gif");
-				$("#loader_img").fadeIn("slow");
+				$("#loader_overlay").delay(1000).fadeOut("slow");
+//				$("#loader_title").fadeIn("slow");
+//				$("#loader_img").attr("src", "img/preloader_tetris.gif");
+//				$("#loader_img").fadeIn("slow");
 			} 
-			
+
+
 			window.names[user['id']] = user['first'].toUpperCase() + ' ' + user['last'].toUpperCase();
 			window.titles[user['id']] = user['title'].toUpperCase();
 		}
+	});
 
 		$(".tile").off().on("click",function() {
 			$(".loader").fadeIn("fast");

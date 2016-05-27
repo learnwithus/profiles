@@ -22,16 +22,15 @@
         
         <div id="detail">
             <div class="modal-body">
-                <div id="header" class="parallax" style="background-image: url(img/header_'; 
-                    echo $user['org']; echo '_';
-                    echo str_replace(' ', '_', $user['title']); echo '_';
-                    echo str_replace(' ', '_', strtolower($user['first'])); echo '_';
-                    echo str_replace(' ', '_', strtolower($user['last'])); echo '_';
-               	    echo $user['id']; echo '.jpg'; 
-		    echo ');">
+                <div id="header" class="parallax" style="background-image: url(img/header_'. 
+			$user['org'].'_'.
+			str_replace(' ', '_', $user['title']).'_'.
+			str_replace(' ', '_', strtolower($user['first'])).'_'.
+			str_replace(' ', '_', strtolower($user['last'])).'_'.
+			$user['id'].'.jpg);">
 		    <img src="img/overlay_header.png" class="image-detail-overlay"/>	
-                    <h1 id="name-user">'; echo $user['first']; echo ' '; echo $user['last']; echo '</h1>
-                    <h1 id="title-user">'; echo $user['title']; echo '</h1>
+                    <h1 id="name-user">'.$user['first'].' '.$user['last'].'</h1>
+                    <h1 id="title-user">'.$user['title'].'</h1>
                 </div>
 
                 <div class="bar">
@@ -41,15 +40,15 @@
                         </div>
                         <div class="col-xs-15 col-sm-15 col-md-15 col-lg-15 item">
                             <h4 class="heading-info-user"> Organization </h4>
-                            <p class="info-user" id="org">'; echo $user['org']; echo '</p>
+                            <p class="info-user" id="org">'.$user['org'].'</p>
                         </div>
                         <div class="col-xs-15 col-sm-15 col-md-15 col-lg-15 item">
                             <h4 class="heading-info-user"> Email </h4>
-                            <p class="info-user">'; echo $user['email']; echo '</p>
+                            <p class="info-user">'.$user['email'].'</p>
                         </div>
                         <div class="col-xs-15 col-sm-15 col-md-15 col-lg-15 item">
                             <h4 class="heading-info-user"> Phone </h4>
-                            <p class="info-user">'; echo $user['phone']; echo '</p>
+                            <p class="info-user">'.$user['phone'].'</p>
                         </div>
                         <div class="col-xs-15 col-sm-15 col-md-15 col-lg-15 item">
                             &nbsp;
@@ -60,7 +59,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h3 class="heading-description">Description</h3>
-                            <p class="description">'; echo $user['description']; echo '</p>
+                            <p class="description">'.$user['description'].'</p>
                         </div>
                     </div>
                     <div class="row">
