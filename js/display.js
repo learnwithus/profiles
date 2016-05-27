@@ -4,7 +4,6 @@ $(function() {
 
 	$(".navbar").hide();
 	$("#back").hide();
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 25) {
             $('.navbar').fadeIn();
@@ -23,11 +22,22 @@ $(function() {
     	}
     });
 
+    $('.menu-item').hover(
+	    function() {
+	    	$(this).prepend('<img class="yellow" src="img/yellow.gif" />');
+	    },
+	    function() {
+	    	$(".yellow").remove();
+	    }
+    );
+
     $("#back").click(function() {
     	$('.tile').each(function(i, obj) {
 	    	$(obj).show();
 		});
 		$("#back").hide();
+		$(".menu-item").removeClass("active");
+		$("#all").addClass("active");
     });
 
 	$.get("php/server.php", function(data) {
@@ -92,7 +102,7 @@ $(function() {
 	});
 
 	$(window).load(function() {
-		$(".loader").delay(3000).fadeOut("slow");
+		$(".loader").delay(10).fadeOut("slow");
 	});
 
 	$("#search").on('input', function() {
@@ -109,6 +119,8 @@ $(function() {
 
 	$(".menu-item").click(function() {
 		var query = $(this).text().toUpperCase();
+		$(".menu-item").removeClass("active");
+		$(this).addClass("active");
 		if (query == "ALL") {
 			$('.tile').each(function(i, obj) {
 	    		$(obj).show();
