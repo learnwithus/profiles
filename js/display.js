@@ -2,6 +2,7 @@ $(function() {
 	window.names = {};
 	$.get("php/server.php", function(data) {
 		var data_parsed = jQuery.parseJSON(data);
+		var half = Math.ceil(data_parsed.length / 2);
 		for (var i = 0; i < data_parsed.length; i++) {
 			var user = data_parsed[i];
 			
@@ -19,6 +20,14 @@ $(function() {
 					"</div>" +
 				"</div>"
 			);
+			if (i == half) {
+				console.log("??");
+				$("#loader_title").html("<h1>" + "Physician Display" + "</h1>");
+				$("#loader_overlay").delay(1000).fadeOut("slow");
+//				$("#loader_title").fadeIn("slow");
+//				$("#loader_img").attr("src", "img/preloader_tetris.gif");
+//				$("#loader_img").fadeIn("slow");
+			} 
 			window.names[user['id']] = user['first'].toUpperCase() + ' ' + user['last'].toUpperCase();
 		}
 	});
