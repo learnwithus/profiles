@@ -76,6 +76,25 @@ body {
 	}
 }
 
+.navbar-fixed-top {
+    background-color: #424242;
+    border: 0;
+}
+
+.dropdown-toggle {
+    width: 100%;
+}
+
+.dropdown-menu {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.menu-item {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+}
 
 .loader {
 	position: fixed;
@@ -91,7 +110,6 @@ body {
 	text-transform: uppercase;
 	font-size: 4em;
 	color:#ddd;
-	
 }
 
 #tiles .tile {
@@ -147,8 +165,13 @@ body {
     }	
 }
 
+#back {
+    position: relative;
+    margin: 16px 16px 16px 0px;
+}
+
 /* Detail page styles */
-#detail{
+#detail {
 	background:#F0F5F9;
 }
 #detail #header {
@@ -352,7 +375,8 @@ body {
     margin: auto;
     width: 100%;
     text-align: center;
-    padding-top: 0%;}
+    padding-top: 0%;
+}
 
 div#loader_overlay {
     position: absolute;
@@ -372,3 +396,4 @@ div#loader_overlay img {
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
+
