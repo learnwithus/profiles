@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -29,13 +29,9 @@
           <a class="navbar-brand" href="#"><img id="brand-img" src="img/vch.png"/></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+        
 		    <form id="search-form" class="navbar-form navbar-right">
 		        <input id="search" type="text" class="form-control" placeholder="Search">
-		        <!--
-		        <button id="search-btn" class="btn btn-default pull-right" type="submit">
-		        	<i class="glyphicon glyphicon-search"></i>
-		        </button>
-		        -->
 		    </form>
 		    <form class="navbar-form pull-right">
 	            <div class="dropdown">
@@ -51,9 +47,10 @@
 				    </ul>
 				</div>
 			</form>
+
         </div>
       </div>
-    </nav>
+    </div>
 
 
 	<div class="loader">
@@ -63,7 +60,7 @@
 	</div>
 	<div id="tiles"></div>
 	<div id="result"></div>
-	<button id="back" class="btn btn-default pull-right">Back to main</button>
+	<!--<button id="back" class="btn btn-default pull-right">Back to main</button>-->
 
 	<script src="js/jquery.js"></script> 
 	<script src="js/bootstrap.min.js"></script> 
