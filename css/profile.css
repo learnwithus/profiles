@@ -76,18 +76,70 @@ body {
 	}
 }
 
-.navbar {
-    min-height: 0px;
+.navbar .navbar-collapse {
+    padding: 0;
 }
 
 .navbar-fixed-top {
     background-color: #1B1C1C;
     border: 0;
+    padding: 0;
+}
+
+.navbar-toggle {
+    margin-left: 10px;
+    max-width: 20%;
 }
 
 #brand-img {
     width: 50px;
     max-height: 100%;
+}
+
+#search-form {
+    max-width: 70%;
+    margin-right: 10px;
+    padding: 0;
+}
+
+#search {
+    height: 30px;
+    width: 500px;
+    max-width: 100%;
+    min-width: 100%;
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    #brand-img {
+        display: none;
+        visibility: hidden;
+    }
+
+    .navbar-form {
+        margin-right: 1px;
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+
+    #search-form {
+        position: relative;
+        bottom: 50px;
+    }
+
+    .navbar {
+        height: 50px;
+    }
+
+    #navbar {
+        position: relative;
+        bottom: 50px;
+        margin-right: 0px;
+        margin-left: 1px;
+        height: 150px;
+    }
+
 }
 
 .dropdown-toggle {
@@ -97,17 +149,7 @@ body {
 .dropdown-menu {
     width: 100%;
     margin-bottom: 16px;
-}
-
-#search-form {
-    max-width: 100%;
-}
-
-#search {
-    height: 30px;
-    width: 500px;
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 300px;
 }
 
 .dropdown-menu::after {
@@ -121,19 +163,6 @@ body {
   content: '';
 }
 
-
-/*
-input#search {
-   height: 34px;
-   padding: 0 43px 0 10px;
-   margin: 0;
-   border: thin solid #646464 ;
-   line-height: 14px;
-   color: #646464 ;
-   width: 333px;
-   background: #DDDDDD ;
-}*/
-
 .dropdown-toggle:active,
 .dropdown-toggle:hover, 
 .open .dropdown-toggle {
@@ -141,19 +170,15 @@ input#search {
     color: white;
     background-color: #424242;
 }
-.navbar-form .dropdown .dropdown-toggle {
+.dropdown .dropdown-toggle {
     cursor: pointer;
     color: white;
     font-size: 1.75em;
     border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-@media (max-width: 768px) {
-    .navbar-form {
-        min-width: 100%;
-    }
+    padding-top: 5px;
+    height: 35px;
 }
 
 .dropdown-menu {
@@ -161,17 +186,8 @@ input#search {
     padding: 0;
     left: 0;
 }
-/*
-.menu-item {
-    text-align: left;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-}
-*/
-.menu-item {
+
+.menu-item {    
     text-align: left;
     cursor: pointer;
     font-size: 1.2em;
