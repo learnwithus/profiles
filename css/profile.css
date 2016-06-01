@@ -137,9 +137,14 @@ body {
         bottom: 50px;
         margin-right: 0px;
         margin-left: 1px;
-        height: 150px;
+        height: 400px;
+        width: 100%;
     }
-
+    
+    #navbar > form{
+     overflow-x: hidden;
+    }
+    
 }
 
 .dropdown-toggle {
@@ -150,6 +155,10 @@ body {
     width: 100%;
     margin-bottom: 16px;
     max-width: 300px;
+}
+
+.nav li{
+    padding-left: 25px;
 }
 
 .dropdown-menu::after {
