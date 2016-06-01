@@ -13,7 +13,7 @@ $(function() {
         		$('.navbar').removeClass('animated slideInDown');
            		$('.navbar').addClass('animated slideOutUp');
 			if ($('.menu-item').is(':visible')) {
-				$('.dropdown-toggle').click();
+				$('.navbar-toggle').click();
 			}
         	}
         }
