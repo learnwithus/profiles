@@ -280,7 +280,11 @@ body {
     #tiles .heading-tile-title {
 	margin-top: -15px;
 	font-size: 0.75em;
-    }	
+    }
+    div#loader_overlay img{
+        width: 50%;
+        padding-bottom: 75%;
+    }
 }
 
 #back {
@@ -525,6 +529,7 @@ div#loader_overlay {
 }
 div#loader_overlay img {
    /* width: 24%;*/
+    padding-bottom: 100%;
 }
 
 #loader_img {
