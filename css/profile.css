@@ -145,6 +145,10 @@ body {
      overflow-x: hidden;
     }
     
+    .menu-item{
+        background: #333;
+    }
+    
 }
 
 .dropdown-toggle {
