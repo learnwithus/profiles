@@ -19,7 +19,7 @@ $(function() {
         }
     });
     $( window ).resize(function() {
-    if($(window).width() < 768){
+    if($(window).width() <= 751){
      $('#smallMenu').removeClass('dropdown');  
      $('#smallToggle').hide();
      $('#smallToggle').removeClass('dropdown-toggle');  
@@ -35,7 +35,7 @@ $(function() {
      $('#smallList').removeClass('nav navbar-nav');  
 
     }});
-        if($(window).width() <= 768){
+        if($(window).width() <= 751){
      $('#smallMenu').removeClass('dropdown');   
      $('#smallToggle').removeClass('dropdown-toggle'); 
      $('#smallToggle').hide();
