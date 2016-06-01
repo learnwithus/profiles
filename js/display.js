@@ -14,6 +14,7 @@ $(function() {
            		$('.navbar').addClass('animated slideOutUp');
 			if ($('.menu-item').is(':visible')) {
 				$('.navbar-toggle').click();
+
 			}
         	}
         }
@@ -62,10 +63,10 @@ $(function() {
 
     $('.navbar-toggle').click(function() {
     	if ($(window).width() <= 768) {
-    		if ($('.navbar').height() === 100) {
+    		if ($('.navbar').height() == 100) {
     			$('.navbar').animate({'height': '50px'});
     			$('#navbar').width("100%");
-    		} else {
+    		} else if ($('.navbar').height() == 50) {
     			$('.navbar').animate({'height': '100px'});
     			//$('#navbar').width(300);
     		}
