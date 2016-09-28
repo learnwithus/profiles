@@ -188,6 +188,7 @@ $(function() {
 			return;
 		}
   		$('.tile').each(function(i, obj) {
+			
     		if (window.titles[$(obj).attr('id')].indexOf(query) == -1) {
     			$(obj).hide();
     		} else {
